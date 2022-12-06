@@ -26,6 +26,8 @@
     padding: 0px;
     text-decoration: none;
     list-style: none;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 #inicio {
@@ -96,7 +98,7 @@
     position: absolute;
     bottom: 2%;
     left: 2%;
-    width: 6em;
+    width: 8em;
     
 }
 #redessociaisinicio > a > img {
@@ -118,6 +120,7 @@
     right: 3%;
     display: flex;
     flex-direction: column;
+    
 }
 
 #menu > a {
@@ -127,10 +130,31 @@
     font-weight: 400;
     writing-mode: vertical-rl;
     padding: 1em 0 1em 1em;
+   
 }
 
 #menu > a:hover {
     color: var(--lightgrey);
     transition: 0.3s;
+}
+
+#sobremim {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    width: 80%;
+    max-width: 1200px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.8em;
+}
+
+#sobremim > p {
+    margin-bottom: 2%;
+}
+
+#sobremim > p:first-child {
+    margin-bottom: 5%;
 }
 
