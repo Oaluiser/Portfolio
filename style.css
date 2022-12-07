@@ -30,6 +30,257 @@
     scroll-behavior: smooth;
 }
 
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: var(--black);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--white);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--red);
+}
+
+@media screen and (max-width: 600px) {
+    body, html {
+        scroll-snap-type: y proximity;
+    }
+
+    #nome {
+        font-size: 20vw;
+    }
+    
+    #sobrenome {
+        font-size: 18vw;
+        margin-bottom: 20vw;
+    }
+
+    #menu {
+        visibility: hidden;
+    }
+
+    #sobremim {
+        scroll-snap-align: start;
+        font-size: 7vw;
+    }
+
+    #habilidades > h1 {
+        font-size: 8vw;
+    }
+
+    #habilidades > div > div > h2 {
+        font-size: 7vw;
+    }
+
+    #habilidades > div > div > ul > li {
+        font-size: 4vw;
+    }
+
+    #historia > h1 {
+        font-size: 8vw;
+    }
+
+    #historia > p {
+        font-size: 4vw;
+    }
+
+    #portfolio > h1 {
+        font-size: 8vw;
+    }
+
+    #portfolio > p {
+        font-size: 4vw;
+    }
+
+    #contato > h1 {
+        font-size: 12vw;
+        padding-top: 4em;
+    }
+
+    #contato > div > a {
+        font-size: 6vw;
+        
+    }
+}
+
+
+@media screen and (min-width: 601px) and (max-width: 767px) {
+    body, html {
+        scroll-snap-type: y mandatory;
+    }
+    
+    section, section > div, footer {
+        scroll-snap-align: start;
+    }
+
+    #nome {
+        font-size: 6em;
+    }
+    
+    #sobrenome {
+        font-size: 5.6em;
+        margin-bottom: 0.2em;
+    }
+
+    #redessociaisinicio {
+        left: 2%;
+    }
+
+    #menu {
+        justify-content: center;
+        position: fixed;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 3%;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    #menu > a {
+        color: var(--lightgrey);
+        margin: 1em 0;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 400;
+        writing-mode: vertical-rl;
+        padding: 1em 0 1em 1em;
+       
+    }
+    
+    #menu > a:hover {
+        color: var(--black);
+        transition: 0.3s;
+    }
+
+    #sobremim {
+        font-size: 1.8em;
+    }
+
+    #habilidades > div > div {
+        flex: 100%;
+    }
+
+    #habilidades > h1 {
+        padding-top: 4em;
+        font-size: 2em;
+    }
+
+    #habilidades > div > div > h2 {
+        font-size: 2em;
+    }
+
+    #historia > h1 {
+        font-size: 2em;
+    }
+
+    #portfolio > h1 {
+        font-size: 2em;
+    }
+
+    #contato > div {
+        width: 70%;
+    }
+
+    #contato > h1 {
+        font-size: 3em;
+        padding-top: 6em;
+    }
+
+    #contato > div > a {
+        font-size: 2em;
+        
+    }
+}
+
+@media screen and (min-width: 768px) {
+    body, html {
+        scroll-snap-type: y mandatory;
+    }
+    
+    section, section > div, footer {
+        scroll-snap-align: start;
+    }
+
+    #nome {
+        font-size: 6em;
+    }
+    
+    #sobrenome {
+        font-size: 5.6em;
+        margin-bottom: 0.2em;
+    }
+
+    #redessociaisinicio {
+        left: 2%;
+    }
+
+    #menu {
+        justify-content: center;
+        position: fixed;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 3%;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    #menu > a {
+        color: var(--lightgrey);
+        margin: 1em 0;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 400;
+        writing-mode: vertical-rl;
+        padding: 1em 0 1em 1em;
+    }
+    
+    #menu > a:hover {
+        color: var(--black);
+        transition: 0.3s;
+    }
+
+    #sobremim {
+        font-size: 1.8em;
+    }
+
+    #habilidades > div > div {
+        flex: 47%;
+    }
+
+    #habilidades > h1 {
+        padding-top: 4em;
+        font-size: 2em;
+    }
+
+    #habilidades > div > div > h2 {
+        font-size: 2em;
+    }
+
+    #historia > h1 {
+        font-size: 2em;
+    }
+
+    #portfolio > h1 {
+        font-size: 2em;
+    }
+
+    #contato > div {
+        width: 70%;
+    }
+
+    #contato > h1 {
+        font-size: 3em;
+        padding-top: 6em;
+    }
+
+    #contato > div > a {
+        font-size: 2em;
+    }
+}
+
 #inicio {
     text-align: center;
     background: rgb(40,40,40);
@@ -42,13 +293,12 @@
     align-items: center;
     justify-content: center;
     color: var(--white);
-    }
+}
 
 #nome {
     font-family: 'Montserrat', sans-serif;
     text-transform: lowercase;
     font-weight: 900;
-    font-size: 6em;
 }
 
 #sobrenome {
@@ -56,10 +306,8 @@
     text-transform: lowercase;
     font-weight: 500;
     font-style: italic;
-    font-size: 5.6em;
     margin-top: -0.4em;
     color: var(--lightgrey);
-    margin-bottom: 0.2em;
 }
 
 #inicio > p:hover {
@@ -97,10 +345,9 @@
 #redessociaisinicio {
     position: absolute;
     bottom: 2%;
-    left: 2%;
     width: 8em;
-    
 }
+
 #redessociaisinicio > a > img {
     width: 1.5em;
     margin: 0.5em;
@@ -108,31 +355,6 @@
 
 #redessociaisinicio > a > img:hover {
     filter: brightness(50%);
-    transition: 0.3s;
-}
-
-#menu {
-    justify-content: center;
-    position: fixed;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 3%;
-    display: flex;
-    flex-direction: column;
-}
-
-#menu > a {
-    color: var(--lightgrey);
-    margin: 1em 0;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 400;
-    writing-mode: vertical-rl;
-    padding: 1em 0 1em 1em;
-   
-}
-
-#menu > a:hover {
-    color: var(--black);
     transition: 0.3s;
 }
 
@@ -145,19 +367,17 @@
     width: 80%;
     max-width: 1200px;
     font-family: 'Roboto', sans-serif;
-    font-size: 1.8em;
 }
 
 #sobremim > p {
-    margin-bottom: 2%;
+    margin-bottom: 1em;
 }
 
 #sobremim > p:first-child {
-    margin-bottom: 5%;
+    margin-bottom: 3em;
 }
 
 #habilidades {
-    height: 100vh;
     margin: auto;
     width: 80%;
     max-width: 1200px;
@@ -172,22 +392,15 @@
     margin-right: 0;
 }
 
-#habilidades > div > div {
-    flex: 50%;
-}
-
 #habilidades > h1 {
     font-family: 'Montserrat', sans-serif;
     text-transform: uppercase;
-    font-size: 2em;
     margin-bottom: 2em;
-    padding-top: 4em;
 }
 
 #habilidades > div > div > h2 {
     font-family: 'Roboto', sans-serif;
     text-transform: uppercase;
-    font-size: 2em;
     margin-bottom: 1em;
     margin-top: 1em;
 }
@@ -200,7 +413,6 @@
 }
 
 #historia {
-    height: 100vh;
     margin: auto;
     width: 80%;
     max-width: 1200px;
@@ -209,7 +421,6 @@
 #historia > h1 {
     font-family: 'Montserrat', sans-serif;
     text-transform: uppercase;
-    font-size: 2em;
     margin-bottom: 2em;
     padding-top: 4em;
 }
@@ -228,7 +439,6 @@ strong {
 
 
 #portfolio {
-    height: 100vh;
     margin: auto;
     width: 80%;
     max-width: 1200px;
@@ -237,7 +447,6 @@ strong {
 #portfolio > h1 {
     font-family: 'Montserrat', sans-serif;
     text-transform: uppercase;
-    font-size: 2em;
     margin-bottom: 2em;
     padding-top: 4em;
 }
@@ -251,7 +460,7 @@ strong {
 }
 
 #contato {
-    height: 100vh;
+    height: 95vh;
     margin: auto;
     width: 80%;
     max-width: 1200px;
@@ -260,15 +469,12 @@ strong {
 #contato > h1 {
     font-family: 'Montserrat', sans-serif;
     text-transform: uppercase;
-    font-size: 3em;
     margin-bottom: 2em;
-    padding-top: 6em;
 }
 
 #contato > div {
     display: flex;
     flex-direction: column;
-    width: 70%;
     margin-left: auto;
     margin-top: 5em;
 }
@@ -276,7 +482,6 @@ strong {
 #contato > div > a {
     color: var(--black);
     font-family: 'Roboto', sans-serif;
-    font-size: 2em;
     margin-bottom: 1em;
 }
 
@@ -294,7 +499,7 @@ footer {
     color: var(--black);
     font-family: 'Roboto', sans-serif;
     font-size: 1em;
-    margin-bottom: 5em;
+    margin-bottom: 2em;
 }
 
 footer > div > a {

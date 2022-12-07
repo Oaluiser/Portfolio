@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aluisio Pereira | Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" defer>
 </head>
 <body>
     <section>
@@ -29,11 +30,11 @@
             <a href="#contato">&lt;contato&gt;</a>
         </nav>
     </section>
-    <section>
+    <section id="snap">
         <div id="sobremim">
-            <p>Olá Mundo!</p>
-            <p>Sou Aluisio, atualmente estudando programação e atuando como freelancer.</p>
-            <p>Estou disponível para novas oportunidades, especialmente como desenvolvedor front-end.</p>
+            <p data-aos="fade-up" data-aos-duration="500" data-aos-delay="400">Olá Mundo!</p>
+            <p data-aos="fade-up" data-aos-duration="500" data-aos-delay="800">Sou Aluisio, atualmente estudando programação e atuando como freelancer.</p>
+            <p data-aos="fade-up" data-aos-duration="500" data-aos-delay="1200">Estou disponível para novas oportunidades, especialmente como desenvolvedor front-end.</p>
         </div>
         <div id="habilidades">
             <h1>Habilidades</h1>
@@ -101,5 +102,10 @@
             <a href="https://wa.me/+5553999494799" target="_blank">WhatsApp</a>
         </div>
     </footer>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
 </body>
 </html>
