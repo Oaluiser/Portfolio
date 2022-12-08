@@ -531,6 +531,10 @@ strong {
     color: var(--white);
 }
 
+#portfolio > a:link, a:visited, a:hover, a:active{
+    color: var(--white);
+}
+
 #portfolio > div {
     display: flex;
     flex-wrap: wrap;
