@@ -189,8 +189,24 @@
         font-size: 2em;
     }
 
+    #historia > p {
+        width: 70%;
+        margin-left: auto;
+        margin-right: 0;
+    }
+
+    #portfolio {
+        scroll-snap-align: end;
+    }
+
     #portfolio > h1 {
         font-size: 2em;
+    }
+
+    #portfolio > p {
+        width: 70%;
+        margin-left: auto;
+        margin-right: 0;
     }
 
     #portfolio > div {
@@ -287,13 +303,30 @@
         font-size: 2em;
     }
 
+    #historia > p {
+        width: 70%;
+        margin-left: auto;
+        margin-right: 0;
+    }
+
+    #portfolio {
+        scroll-snap-align: end;
+    }
+
     #portfolio > h1 {
         font-size: 2em;
+    }
+
+    #portfolio > p {
+        width: 70%;
+        margin-left: auto;
+        margin-right: 0;
     }
 
     #portfolio > div {
         justify-content: space-between;
     }
+
 
     .landscape {
         width: 75%;
@@ -464,9 +497,6 @@
 
 #historia > p {
     font-family: 'Roboto', sans-serif;
-    width: 70%;
-    margin-left: auto;
-    margin-right: 0;
     padding-bottom: 2em;
 }
 
@@ -485,7 +515,6 @@ strong {
     width: 80%;
     max-width: 1200px;
     padding-bottom: 4em;
-    scroll-snap-align: end;
 }
 
 #portfolio > h1 {
@@ -498,9 +527,6 @@ strong {
 
 #portfolio > p {
     font-family: 'Roboto', sans-serif;
-    width: 70%;
-    margin-left: auto;
-    margin-right: 0;
     padding-bottom: 2em;
     color: var(--white);
 }
