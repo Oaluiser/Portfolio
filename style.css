@@ -30,6 +30,19 @@
     scroll-behavior: smooth;
 }
 
+#mousetrailer {
+    height: 30px;
+    width: 30px;
+    background-color: var(--white);
+    border-radius: 30px;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    z-index: -1;
+    pointer-events: none;
+}
+
+
 ::-webkit-scrollbar {
     width: 10px;
 }
