@@ -49,14 +49,18 @@
     height: 50px;
     width: 50px;
     background-color: var(--red);
-    border-radius: 100px;
+    border-radius: 50px;
     position: fixed;
     left: 0px;
     top: 0px;
     z-index: 1;
     pointer-events: none;
     opacity: 0;
-    transition: opacity 500ms ease;
+    transition: 500ms ease;
+    display: flex;
+    align-items: center;
+    color: var(--white);
+    font-family: 'Roboto', sans-serif;
 }
 
 body:hover > #mouse {
@@ -406,6 +410,8 @@ body:hover > #mousetrailer {
     font-family: 'Montserrat', sans-serif;
     text-transform: lowercase;
     font-weight: 900;
+    position: relative;
+    z-index: 2;
 }
 
 #sobrenome {
@@ -415,6 +421,8 @@ body:hover > #mousetrailer {
     font-style: italic;
     margin-top: -0.4em;
     color: var(--lightgrey);
+    position: relative;
+    z-index: 2;
 }
 
 #inicio > p:hover {
@@ -464,6 +472,11 @@ body:hover > #mousetrailer {
     filter: brightness(50%);
     transition: 0.3s;
 }
+
+#menu {
+    z-index: 2;
+}
+
 
 #sobremim {
     height: 100vh;
@@ -583,12 +596,12 @@ strong {
     text-decoration: underline;
 }
 
-#mockup {
+.mockup {
     width: 100%;
     transition: 0.3s;
 }
 
-#mockup:hover {
+.mockup:hover {
     transform: scale(1.05);
     transition: 0.3s;
 }
