@@ -2,6 +2,19 @@ const mouse = document.getElementById("mouse");
 const mouseTrailer = document.getElementById("mousetrailer");
 const mouseExpandir = document.getElementById("mouseexpandir");
 const copiar = document.getElementById("copiar");
+const expandir = document.getElementById("expandir");
+const baixar = document.getElementById("baixar");
+
+window.onmouseover = () => {
+    mouse.style.opacity = "1";
+    mouseTrailer.style.opacity = "0.8";
+}
+
+window.onmouseout = () => {
+    mouse.style.opacity = "0";
+    mouseTrailer.style.opacity = "0";
+}
+
 
 window.onmousemove = event => {
     const x = event.clientX;
@@ -13,7 +26,6 @@ window.onmousemove = event => {
     
     if (event.target.id === "expandir") {
         mouseExpandir.style.display = "block";
-        setTimeout(() => {mouseExpandir.innerHTML = "Clique ou role o mouse para ver o conteúdo!"}, 350);
         mouseTrailer.style.fontSize = "1em";
         mouseTrailer.style.width = "390px";
         mouseTrailer.style.paddingLeft = "50px";
@@ -49,14 +61,12 @@ window.onmousemove = event => {
         mouse.style.zIndex = "-1";
     } else if (event.target.id === "copiar") {
         mouseExpandir.style.display = "block";
-        setTimeout(() => {mouseExpandir.innerHTML = "Clique para copiar!"}, 350);
         mouseTrailer.style.fontSize = "1em";
         mouseTrailer.style.width = "200px";
         mouseTrailer.style.paddingLeft = "50px";
         keyframes.transform = `translate(${x-25}px, ${y-25}px)`;
     } else if (event.target.id === "baixar") {
         mouseExpandir.style.display = "block";
-        setTimeout(() => {mouseExpandir.innerHTML = "Clique para baixar!"}, 350);
         mouseTrailer.style.fontSize = "1em";
         mouseTrailer.style.width = "200px";
         mouseTrailer.style.paddingLeft = "50px";
@@ -70,11 +80,24 @@ window.onmousemove = event => {
         mouseTrailer.style.paddingLeft = "0px";
         mouse.style.zIndex = "2";
     }
-
+    
+    
     mousetrailer.animate(keyframes, {
-        duration: 1000,
+        duration: 800,
         fill: "forwards"
     });
+}
+
+expandir.onmouseenter = () => {
+    setTimeout(() => {mouseExpandir.innerHTML = "Clique ou role o mouse para ver o conteúdo!"}, 350);
+}
+
+copiar.onmouseenter = () => {
+    setTimeout(() => {mouseExpandir.innerHTML = "Clique para copiar!"}, 350);
+}
+
+baixar.onmouseenter = () => {
+    setTimeout(() => {mouseExpandir.innerHTML = "Clique para baixar!"}, 350);
 }
 
 copiar.addEventListener("click", event => {

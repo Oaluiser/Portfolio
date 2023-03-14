@@ -63,14 +63,6 @@
     font-family: 'Roboto', sans-serif;
 }
 
-body:hover > #mouse {
-    opacity: 1;
-}
-
-body:hover > #mousetrailer {
-    opacity: 0.8;
-}
-
 
 ::-webkit-scrollbar {
     width: 10px;
@@ -88,7 +80,17 @@ body:hover > #mousetrailer {
     background-color: var(--red);
 }
 
+@media screen and (max-height: 550px) {
+    #menu {
+        visibility: hidden;
+    }
+}
+
 @media screen and (max-width: 600px) {
+    #mouse, #mousetrailer {
+        display: none;
+    }
+
     body, html {
         scroll-snap-type: y proximity;
     }
@@ -377,14 +379,14 @@ body:hover > #mousetrailer {
     .portrait {
         width: 25%;
     }
-
+    
     #contato > div {
         width: 70%;
     }
-
+    
     #contato > h1 {
         font-size: 3em;
-        padding-top: 6em;
+        padding-top: 20vh;
     }
 
     #contato > div > a {
@@ -397,7 +399,7 @@ body:hover > #mousetrailer {
     background: rgb(40,40,40);
     background: linear-gradient(90deg, rgba(40,40,40,1) 0%, rgba(59,59,59,1) 100%);
     background-image: url(img/asfalt-dark.png), linear-gradient(90deg, rgba(40,40,40,1) 0%, rgba(59,59,59,1) 100%);
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-content: center;
@@ -479,7 +481,7 @@ body:hover > #mousetrailer {
 
 
 #sobremim {
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -607,7 +609,7 @@ strong {
 }
 
 #contato {
-    height: 95vh;
+    min-height: 95vh;
     margin: auto;
     width: 80%;
     max-width: 1200px;
